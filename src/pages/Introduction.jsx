@@ -8,10 +8,10 @@ export default function Introduction() {
         <p style={{textAlign: 'center'}}>josh watkins</p>
 
         <figure style={{textAlign: 'center'}}>
-          <img
-      src="/images/Helldivers-2-Symbol-500x281.png"
-  alt="helldivers 2 logo"
-            style={{maxWidth: '100%', height: 'auto', display: 'inline-block'}}
+             <img
+            src="/Helldivers-2-Symbol-500x281.png"
+            alt="helldivers 2 logo"
+            style={{ maxWidth: '100%', height: 'auto', display: 'inline-block' }}
           />
           <figcaption style={{textAlign: 'center'}}>Helldivers 2 Logo</figcaption>
         </figure>
