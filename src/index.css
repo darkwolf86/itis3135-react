@@ -1,68 +1,249 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+/* Basic CSS Reset */
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* Body Styles */
+html,body {
+    margin: 0;
+    height: 100%;
 }
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+main {
+    flex: 1;
+   max-width: 1200px;
+   width: 90%;
+   margin: 0 auto;
+   padding: 20px;
 }
-a:hover {
-  color: #535bf2;
+/* Center legends (for fieldsets) */
+legend {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 0 0 12px;
+    padding: 0;
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: inherit;
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f4;
+    color: #222;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+figcaption {
+    font-style: italic;
+    font-size: 0.9em;
+    color: #555;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
+
+li {
+    margin-bottom: 8px;
+    line-height: 1.6;
 }
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    align-items: center;
+    margin-bottom: 24px;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
+p {
+    text-align: center;
+}
+
+footer {
+    
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+
+   
+}
+
+ul {
+
+    text-align: center;
+
+    list-style-position: inside;
+
+}
+h1, h2 {
+    text-align: center;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Headings */
+h3, h4, h5, h6 {
+    margin-bottom: 16px;
+    font-weight: 600;
+}
+
+/* Links */
+a {
+    color: #e67e22; /* orange shade */
+    text-decoration: none;
+}
+a:visited {
+    color: #16a085; /* teal shade */
+}
+a:hover, a:focus {
+    color: #c0392b; /* red shade */
+    text-decoration: underline;
+}
+
+/* Buttons */
+button, .btn {
+    background-color: #0077cc;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+}
+button:hover, .btn:hover {
+    background-color: #005fa3;
+}
+
+/* Lists */
+ul, ol {
+    margin-left: 20px;
+    margin-bottom: 16px;
+}
+
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Tables */
+table {
+    border-collapse: collapse; /* replicates cellspacing="0" */
+    width: auto;
+    margin: 0 auto; /* centers the table */
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+table th,
+table td {
+    border: 1px solid #ccc; /* replicates border="1" */
+    padding: 8px; /* replicates cellpadding="8" */
+    text-align: left;
+}
+
+/* Optional: Zebra striping for rows */
+table tr:nth-child(even) {
     background-color: #f9f9f9;
-  }
 }
+
+
+/* Responsive Media Queries */
+/* @media (max-width: 1024px) {
+    .container {
+        max-width: 90%;
+        padding: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 100%;
+        padding: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 8px;
+    }
+} */
+/* ========== Responsive Media Queries ========== */
+
+/* Tablet Devices (601px - 980px) */
+/* === Introduction Output Styling === */
+#introOutput {
+  text-align: center; /* centers headings, quotes, and links */
+  margin-top: 30px;
+}
+
+/* keeps lists readable but centered on the page */
+#introOutput ul {
+  display: inline-block;
+  text-align: left;
+  list-style-position: inside;
+  padding-left: 0;
+}
+
+/* centers and spaces out the links */
+#introOutput a {
+  margin: 0 6px;
+  text-decoration: none;
+}
+
+#introOutput a:hover {
+  text-decoration: underline;
+}
+
+
+
+@media screen and (max-width: 980px) and (min-width: 601px) {
+    main, .container {
+        width: 95%;
+        padding: 16px;
+    }
+    nav {
+        flex-direction: column;
+        gap: 16px;
+    }
+}
+
+/* Mobile Devices (Up to 600px) */
+@media screen and (max-width: 600px) {
+    main, .container {
+        width: 98%;
+        padding: 12px;
+    }
+    nav {
+        flex-direction: column;
+        gap: 12px;
+    }
+    body, p, li, a {
+        font-size: 1rem;
+    }
+    h1, h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Small Mobile Devices (Optional) */
+@media screen and (max-width: 400px) {
+    main, .container {
+        padding: 8px;
+    }
+    h1 {
+        font-size: 1.2rem;
+    }
+    nav {
+        font-size: 0.95rem;
+    }
+}
+
+
